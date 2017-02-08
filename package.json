@@ -1,0 +1,54 @@
+{
+  "name": "alioss-js-upload",
+  "version": "1.0.0",
+  "description": "a component of upload for web",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taosin/alioss-js-upload.git"
+  },
+  "keywords": [
+    "oss-upload"
+  ],
+  "author": "iMocco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taosin/alioss-js-upload/issues"
+  },
+  "homepage": "https://github.com/taosin/alioss-js-upload#readme",
+  "engineStrict": true,
+  "dependencies": {
+    "ali-oss": "^4.8.0",
+    "binarysearch": "~0.2.4",
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.13.2",
+    "connect-redis": "^2.3.0",
+    "cookie-parser": "^1.3.5",
+    "ejs": "^2.5.5",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "georedis": "3.0.3",
+    "log4js": "^0.6.26",
+    "mocha": "^2.2.5",
+    "moment": "2.13.0",
+    "mongodb": "^2.0.35",
+    "power-express": "0.1.2",
+    "promise-redis": "0.0.1",
+    "querystring": "^0.2.0",
+    "redis": "^0.12.1",
+    "request": "^2.58.0",
+    "solr-client": "^0.6.0",
+    "sprintf-js": "^1.0.3",
+    "urllib": "^2.3.8",
+    "wechat": "^2.0.3"
+  },
+  "standard": {
+    "globals": [
+      "logger"
+    ]
+  }
+}
