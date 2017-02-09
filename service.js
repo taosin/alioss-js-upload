@@ -5,10 +5,10 @@ var STS = OSS.STS;
 var co = require('co');
 
 var sts = new STS({
-	accessKeyId: 'accessKeyId',
-	accessKeySecret: 'accessKeySecret',
+	accessKeyId: 'LTAI5d5SNCZd9n5G',
+	accessKeySecret: 'NU9RE6Rlj5QnQB3LvfjZCsNLzpWAsf',
 });
-var rolearn = 'acs:ram::13088637321312:role/uploadonly';
+var rolearn = 'acs:ram::1308863747557048:role/ramxgouwebuploadonly';
 
 var policy = {
 	"Version": "1",
@@ -20,8 +20,8 @@ var policy = {
 		"oss:PutObject"
 		],
 		"Resource": [
-		"acs:oss:*:*:upload",
-		"acs:oss:*:*:upload/*"
+		"acs:oss:*:*:xgou-web-upload",
+		"acs:oss:*:*:xgou-web-upload/*"
 		]
 	}
 	]
