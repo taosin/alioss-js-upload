@@ -10,7 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ali-oss": "^4.10.0",
+    "axios": "^0.16.2",
+    "child_process": "^1.0.2",
+    "co": "^4.6.0",
+    "fs": "0.0.1-security",
     "vue": "^2.3.3",
+    "vue-axios": "^2.0.2",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
