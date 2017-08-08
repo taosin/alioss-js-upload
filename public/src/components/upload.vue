@@ -51,6 +51,8 @@
           }
         })
       },
+
+      // 随机生成文件名
       random_string(len) {
         　　len = len || 32;
         　　var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';   
@@ -64,6 +66,3 @@
     }
   }
 </script>
-
-<style scoped>
-</style>
