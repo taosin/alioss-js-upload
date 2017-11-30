@@ -58,7 +58,7 @@
                 }
               }).then((results) => {
                 // 上传完成
-                const url = 'http://oss-upload.oss-cn-hangzhou.aliyuncs.com/'+ results.name;
+                const url = 'http://aliyun-oss-upload.oss-cn-hangzhou.aliyuncs.com/'+ results.name;
                 _this.url = url;
                 console.log(url);
               }).catch((err) => {
