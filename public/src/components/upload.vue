@@ -2,7 +2,15 @@
   <div class="index">
     <div class="oss_file">
       <input type="file" :id="id" @change="doUpload"/>
-      {{percentage}}
+      <hr> 
+      <p>
+        上传进度：{{percentage}}
+      {{percentage===1?"success!":(percentage===0?'waiting...':'uploading')}}
+      </p>
+      <hr>
+      <ul>
+        <li v-for="u in urls">{{u}}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -15,12 +23,15 @@
         region: 'oss-cn-hangzhou',
         bucket: 'aliyun-oss-upload',
         id: 'upload',
-        percentage: 0
+        percentage: 0,
+        url:'',
+        urls:[]
       }
     },
     methods:{
       doUpload () {
         const _this = this
+        const urls = [];
         _this.axios.get('/alioss/getOssToken').then((result) => {
           const client = new OSS.Wrapper({
             region: _this.region,
@@ -29,13 +40,17 @@
             stsToken: result.data.token.SecurityToken,
             bucket: _this.bucket
           })
+          _this.percentage = 0;
           const files = document.getElementById(_this.id)
           if (files.files) {
             const fileLen = document.getElementById(_this.id).files
             let resultUpload = ''
             for (let i = 0; i < fileLen.length; i++) {
               const file = fileLen[i]
+              // 随机命名
               let random_name = this.random_string(6) + '_' + new Date().getTime() + '.' + file.name.split('.').pop()
+
+              // 上传
               client.multipartUpload(random_name, file, {
                 progress: function* (percentage, cpt) {
                   // 上传进度
@@ -43,7 +58,9 @@
                 }
               }).then((results) => {
                 // 上传完成
-                console.log('http://oss-upload.oss-cn-hangzhou.aliyuncs.com/'+ results.name);
+                const url = 'http://oss-upload.oss-cn-hangzhou.aliyuncs.com/'+ results.name;
+                _this.url = url;
+                console.log(url);
               }).catch((err) => {
                 console.log(err)
               })
@@ -62,6 +79,13 @@
           　　pwd += chars.charAt(Math.floor(Math.random() * maxPos));
         }
         return pwd;
+      }
+    },
+    watch:{
+      url(val){
+        if(val){
+        this.urls.push(val);
+        }
       }
     }
   }

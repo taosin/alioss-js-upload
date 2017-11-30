@@ -7,7 +7,8 @@ var port = "8188"
 var app = express()
 var service = require('./service.js')
 
-// setCrossDomain (req, res, next) {
+// setCrossDomain (req,
+ // res, next) {
 //   res.append('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, If-Modified-Since')
 //   res.append('Access-Control-Allow-Credentials', 'true')
 //   res.append('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE')
