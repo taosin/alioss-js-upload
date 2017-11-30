@@ -32,12 +32,12 @@
       doUpload () {
         const _this = this
         const urls = [];
-        _this.axios.get('/alioss/getOssToken').then((result) => {
+        _this.axios.get('http://106.15.89.254:8188/alioss/getOssToken').then((result) => {
           const client = new OSS.Wrapper({
             region: _this.region,
-            accessKeyId: result.data.token.AccessKeyId,
-            accessKeySecret: result.data.token.AccessKeySecret,
-            stsToken: result.data.token.SecurityToken,
+            accessKeyId: result.data.data.AccessKeyId,
+            accessKeySecret: result.data.data.AccessKeySecret,
+            stsToken: result.data.data.SecurityToken,
             bucket: _this.bucket
           })
           _this.percentage = 0;
