@@ -3,7 +3,7 @@
 
 基于vue2.0的上传页面，采用分片上传
 ![img](https://diycode.b0.upaiyun.com/photo/2017/0e11af972a262b19c8f38df754c88348.png)
->作者：Nix，博客:[iamtaoxin.com](http://iamtaoxin.com)
+>作者：Nix，博客:[www.iamtaoxin.com](http://www.iamtaoxin.com)
 
 [源码](https://github.com/taosin/alioss-js-upload/tree/2.0)
 [demo](http://imocco.coding.me/alioss-demo/)
