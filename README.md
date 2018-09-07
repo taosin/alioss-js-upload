@@ -3,14 +3,14 @@
 
 基于vue2.0的上传页面，采用分片上传
 ![img](https://diycode.b0.upaiyun.com/photo/2017/0e11af972a262b19c8f38df754c88348.png)
->作者：Nix，博客:[iamtaoxin.com](http://iamtaoxin.com)
+>作者：Nix，博客:[www.iamtaoxin.com](http://www.iamtaoxin.com)
 
 [源码](https://github.com/taosin/alioss-js-upload/tree/2.0)
 [demo](http://imocco.coding.me/alioss-demo/)
 **关乎H5直传的demo，在h5-direct分支；[h5-direct](https://github.com/taosin/alioss-js-upload/tree/h5-direct)
 
 
-#### 注： 具体配置方法可参照 [vue页面使用阿里oss上传功能（一）](http://iamtaoxin.com/2017/05/24/vue页面使用阿里oss上传功能-一/)  和 [vue页面使用阿里oss上传图片功能(二)](http://iamtaoxin.com/2017/05/24/vue页面使用阿里oss上传图片功能-二/)
+#### 注： 具体配置方法可参照 [vue页面使用阿里oss上传功能（一）](http://www.iamtaoxin.com/2017/05/24/vue页面使用阿里oss上传功能-一/)  和 [vue页面使用阿里oss上传图片功能(二)](http://www.iamtaoxin.com/2017/05/24/vue页面使用阿里oss上传图片功能-二/)
 ---
 
 
